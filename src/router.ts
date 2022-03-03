@@ -1,16 +1,20 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import getRouters from 'micro-submodule';
 import Home from './views/Home.vue';
+import HomeRef from '@/views/HomeRef.vue';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    ...getRouters('base'), {
+     {
       path: '/',
       name: 'home1',
       component: Home,
+    },     {
+      path: '/home2',
+      name: 'home2',
+      component: HomeRef,
     },
     {
       path: '/about1',
